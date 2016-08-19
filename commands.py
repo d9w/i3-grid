@@ -104,36 +104,36 @@ def whereami():
 # move in direction
 def up():
     row, col = _getCoord(_getCurrentWorkspace())
-    if row - 1 >= 0:
-        _move(_getID(row - 1, col))
+    row = (row - 1) % rows;
+    _move(_getID(row, col))
 def down():
     row, col = _getCoord(_getCurrentWorkspace())
-    if row + 1 < rows:
-        _move(_getID(row + 1, col))
+    row = (row + 1) % rows;
+    _move(_getID(row, col))
 def right():
     row, col = _getCoord(_getCurrentWorkspace())
-    if col + 1 < cols:
-        _move(_getID(row, col + 1))
+    col = (col + 1) % cols
+    _move(_getID(row, col))
 def left():
     row, col = _getCoord(_getCurrentWorkspace())
-    if col - 1 >= 0:
-        _move(_getID(row, col - 1))
+    col = (col - 1) % cols
+    _move(_getID(row, col))
 
 # send window in direction
 def sendUp():
     row, col = _getCoord(_getCurrentWorkspace())
-    if row - 1 >= 0:
-        _send(_getID(row - 1, col))
+    row = (row - 1) % rows;
+    _send(_getID(row, col))
 def sendDown():
     row, col = _getCoord(_getCurrentWorkspace())
-    if row + 1 < rows:
-        _send(_getID(row + 1, col))
+    row = (row + 1) % rows;
+    _send(_getID(row, col))
 def sendRight():
     row, col = _getCoord(_getCurrentWorkspace())
-    if col + 1 < cols:
-        _send(_getID(row, col + 1))
+    col = (col + 1) % cols
+    _send(_getID(row, col))
 def sendLeft():
     row, col = _getCoord(_getCurrentWorkspace())
-    if col - 1 >= 0:
-        _send(_getID(row, col - 1))
+    col = (col - 1) % cols
+    _send(_getID(row, col))
 

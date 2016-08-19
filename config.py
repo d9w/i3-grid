@@ -8,8 +8,8 @@
 # (at your option) any later version.
 
 # set the dimensions of the grid
-rows = 3
-cols = 3
+rows = 2
+cols = 2
 
 # set to True to move to a workspace after sending a window to it
 moveWithSend = True
